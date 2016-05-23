@@ -1,42 +1,56 @@
-#
-# Be sure to run `pod lib lint podTestLibrary.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = "podTestLibrary"
   s.version          = "0.1.0"
-  s.summary          = "A short description of podTestLibrary."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = "Just Testing"
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+                       Testing Private Podspec.
+
+                       * Markdown format.
+                       * Don't worry about the indent, we strip it!
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/podTestLibrary"
+  s.homepage         = "https://github.com/410900345/podTestLibrary"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "jiuhao-yangshuo" => "410900345@qq.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/podTestLibrary.git", :tag => s.version.to_s }
+  s.author           = { "Suk" => "410900345@qq.com" }
+  s.source           = { :git => "https://github.com/410900345/podTestLibrary.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
+  s.requires_arc = true
+  
+  # s.subspec 'NetWorkEngine' do |networkEngine|
+  #     networkEngine.source_files = 'Pod/Classes/NetworkEngine/**/*'
+  #     networkEngine.public_header_files = 'Pod/Classes/NetworkEngine/**/*.h'
+  #     networkEngine.dependency 'AFNetworking', '~> 2.3'
+  # end
 
-  s.source_files = 'podTestLibrary/Classes/**/*'
+  # s.subspec 'DataModel' do |dataModel|
+  #     dataModel.source_files = 'Pod/Classes/DataModel/**/*'
+  #     dataModel.public_header_files = 'Pod/Classes/DataModel/**/*.h'
+  # end
+
+  s.subspec 'CommonTools' do |commonTools|
+      commonTools.source_files = 'Pod/Classes/CommonTools/**/*'
+      commonTools.public_header_files = 'Pod/Classes/CommonTools/**/*.h'
+      commonTools.dependency 'OpenUDID', '~> 1.0.0'
+  end
+
+  # s.subspec 'UIKitAddition' do |ui|
+  #     ui.source_files = 'Pod/Classes/UIKitAddition/**/*'
+  #     ui.public_header_files = 'Pod/Classes/UIKitAddition/**/*.h'
+  #     ui.resource = "Pod/Assets/MLSUIKitResource.bundle"
+  #     ui.dependency 'PodTestLibrary/CommonTools'
+  # end
+  
+  # s.source_files = 'podTestLibrary/Classes/**/*'
   
   # s.resource_bundles = {
   #   'podTestLibrary' => ['podTestLibrary/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

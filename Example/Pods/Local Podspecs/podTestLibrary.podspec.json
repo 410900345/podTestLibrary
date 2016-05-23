@@ -1,19 +1,32 @@
 {
   "name": "podTestLibrary",
   "version": "0.1.0",
-  "summary": "A short description of podTestLibrary.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/podTestLibrary",
+  "summary": "Just Testing",
+  "description": "Testing Private Podspec.\n\n* Markdown format.\n* Don't worry about the indent, we strip it!",
+  "homepage": "https://github.com/410900345/podTestLibrary",
   "license": "MIT",
   "authors": {
-    "jiuhao-yangshuo": "410900345@qq.com"
+    "Suk": "410900345@qq.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/podTestLibrary.git",
+    "git": "https://github.com/410900345/podTestLibrary.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "7.0"
   },
-  "source_files": "podTestLibrary/Classes/**/*"
+  "requires_arc": true,
+  "frameworks": "UIKit",
+  "subspecs": [
+    {
+      "name": "CommonTools",
+      "source_files": "Pod/Classes/CommonTools/**/*",
+      "public_header_files": "Pod/Classes/CommonTools/**/*.h",
+      "dependencies": {
+        "OpenUDID": [
+          "~> 1.0.0"
+        ]
+      }
+    }
+  ]
 }

@@ -84,8 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/podTestLibrary/podTestLibrary.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OpenUDID/OpenUDID.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/podTestLibrary/podTestLibrary.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/OpenUDID/OpenUDID.framework"
 fi
