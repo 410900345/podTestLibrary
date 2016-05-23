@@ -22,7 +22,7 @@ pod "podTestLibrary"
 
 ## Author
 
-jiuhao-yangshuo, 410900345@qq.com
+410900345@qq.com
 
 ## License
 
