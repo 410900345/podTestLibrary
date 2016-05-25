@@ -16,17 +16,22 @@
     "ios": "7.0"
   },
   "requires_arc": true,
+  "default_subspecs": "CommonTools",
   "frameworks": "UIKit",
   "subspecs": [
     {
+      "name": "DataModel",
+      "resources": "podTestLibrary/Classes/DataModel/ShareSDKUI.bundle"
+    },
+    {
       "name": "CommonTools",
-      "source_files": "Pod/Classes/CommonTools/**/*",
-      "public_header_files": "Pod/Classes/CommonTools/**/*.h",
-      "dependencies": {
-        "OpenUDID": [
-          "~> 1.0.0"
-        ]
-      }
+      "source_files": "podTestLibrary/Classes/CommonTools/**/*",
+      "public_header_files": "podTestLibrary/Classes/CommonTools/**/*.h"
+    },
+    {
+      "name": "UIKitAddition",
+      "source_files": "podTestLibrary/Classes/UIKitAddition/**/*",
+      "public_header_files": "podTestLibrary/Classes/UIKitAddition/**/*.h"
     }
   ]
 }

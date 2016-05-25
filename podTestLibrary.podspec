@@ -19,30 +19,30 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
   s.requires_arc = true
-  
+  s.default_subspecs    = 'CommonTools'
   # s.subspec 'NetWorkEngine' do |networkEngine|
   #     networkEngine.source_files = 'Pod/Classes/NetworkEngine/**/*'
   #     networkEngine.public_header_files = 'Pod/Classes/NetworkEngine/**/*.h'
   #     networkEngine.dependency 'AFNetworking', '~> 2.3'
   # end
 
-  # s.subspec 'DataModel' do |dataModel|
-  #     dataModel.source_files = 'Pod/Classes/DataModel/**/*'
-  #     dataModel.public_header_files = 'Pod/Classes/DataModel/**/*.h'
-  # end
+  s.subspec 'DataModel' do |dataModel|
+     dataModel.resources = 'podTestLibrary/Classes/DataModel/ShareSDKUI.bundle'
+      # dataModel.source_files = 'podTestLibrary/Classes/DataModel/**/*'
+      # dataModel.public_header_files = 'podTestLibrary/Classes/DataModel/**/*.h'
+  end
+  
+  #sp.default_subspecs = 'QQ', 'SinaWeibo', 'WeChat',
 
   s.subspec 'CommonTools' do |commonTools|
-      commonTools.source_files = 'Pod/Classes/CommonTools/**/*'
-      commonTools.public_header_files = 'Pod/Classes/CommonTools/**/*.h'
-      commonTools.dependency 'OpenUDID', '~> 1.0.0'
+      commonTools.source_files = 'podTestLibrary/Classes/CommonTools/**/*'
+      commonTools.public_header_files = 'podTestLibrary/Classes/CommonTools/**/*.h'
   end
 
-  # s.subspec 'UIKitAddition' do |ui|
-  #     ui.source_files = 'Pod/Classes/UIKitAddition/**/*'
-  #     ui.public_header_files = 'Pod/Classes/UIKitAddition/**/*.h'
-  #     ui.resource = "Pod/Assets/MLSUIKitResource.bundle"
-  #     ui.dependency 'PodTestLibrary/CommonTools'
-  # end
+  s.subspec 'UIKitAddition' do |ui|
+      ui.source_files = 'podTestLibrary/Classes/UIKitAddition/**/*'
+      ui.public_header_files = 'podTestLibrary/Classes/UIKitAddition/**/*.h'
+  end
   
   # s.source_files = 'podTestLibrary/Classes/**/*'
   

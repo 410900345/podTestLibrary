@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'podTestLibrary_Example' do
   pod 'podTestLibrary', :path => '../'
-
+  pod 'podTestLibrary/DataModel', :path => '../'
   target 'podTestLibrary_Tests' do
     inherit! :search_paths
 

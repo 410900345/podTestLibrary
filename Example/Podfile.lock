@@ -9,11 +9,10 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.0)
   - FBSnapshotTestCase/SwiftSupport (2.1.0):
     - FBSnapshotTestCase/Core
-  - OpenUDID (1.0.0)
   - podTestLibrary (0.1.0):
     - podTestLibrary/CommonTools (= 0.1.0)
-  - podTestLibrary/CommonTools (0.1.0):
-    - OpenUDID (~> 1.0.0)
+  - podTestLibrary/CommonTools (0.1.0)
+  - podTestLibrary/DataModel (0.1.0)
   - Specta (1.0.5)
 
 DEPENDENCIES:
@@ -21,6 +20,7 @@ DEPENDENCIES:
   - Expecta+Snapshots
   - FBSnapshotTestCase
   - podTestLibrary (from `../`)
+  - podTestLibrary/DataModel (from `../`)
   - Specta
 
 EXTERNAL SOURCES:
@@ -31,10 +31,9 @@ SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
   FBSnapshotTestCase: 366ecd378511d7716c79991cd8067d1eed23578d
-  OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
-  podTestLibrary: c0f6300bcac89faa7a6fb349930b116c99a4d0a3
+  podTestLibrary: 8659124b8d1980bad1c1d38fee41a626fcf573d1
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
 
-PODFILE CHECKSUM: 2292eca37df997eb6d2233786c6775793544619c
+PODFILE CHECKSUM: 97e9055afeaf162cc1cb57cc5ad1dc5fbb97a64a
 
 COCOAPODS: 1.0.0
